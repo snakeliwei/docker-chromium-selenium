@@ -13,7 +13,7 @@ RUN apk add --no-cache --update 'su-exec>=0.2' tzdata bash curl xvfb chromium py
     rm "chromedriver_linux64.zip" && \
     rm -rf /var/cache/apk/* && \
     ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome && \
-    ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser && \
+#    ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser && \
     chmod +x /usr/bin/xvfb-chromium && \
     chmod +x /usr/local/bin/chromedriver 
 
