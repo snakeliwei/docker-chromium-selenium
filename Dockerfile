@@ -14,8 +14,5 @@ RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/ma
     unzip "chromedriver_linux64.zip" -d /usr/local/bin && \
     rm "chromedriver_linux64.zip" && \
     rm -rf /var/cache/apk/* && \
-    ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome && \
-    ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser 
-
-
-
+    ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome
+    # ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser 
