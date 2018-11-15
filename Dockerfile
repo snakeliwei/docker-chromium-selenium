@@ -9,7 +9,7 @@ RUN apk add --no-cache --update 'su-exec>=0.2' tzdata bash curl xvfb python3 unz
     pip3 install selenium && \
     rm -rf /var/cache/apk/* && \
     ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome && \
-    ln -s /usr/bin/xvfb-chromium /usr/bin/chromium 
+    chmod +x /usr/bin/xvfb-chromium
 # Add Chrome as a user
 RUN mkdir -p /usr/src/app \
     && adduser -D chrome \
