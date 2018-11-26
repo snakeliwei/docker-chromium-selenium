@@ -4,7 +4,7 @@ LABEL maintainer="lyndon <snakeliwei@gmail.com>"
 ENV LANG C.UTF-8
 
 COPY ./xvfb-chromium /usr/bin/xvfb-chromium
-RUN apk add --no-cache --update 'su-exec>=0.2' tzdata bash curl xvfb python3 unzip chromium chromium-chromedriver nss && \
+RUN apk add --no-cache --update 'su-exec>=0.2' tzdata bash python3 curl unzip libexif udev chromium chromium-chromedriver xvfb && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     pip3 install selenium && \
     rm -rf /var/cache/apk/* && \
