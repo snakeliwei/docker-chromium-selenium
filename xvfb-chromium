@@ -20,7 +20,7 @@ export DISPLAY=:1
 Xvfb $DISPLAY -ac -screen 0 $XVFB_WHD -nolisten tcp &  
 xvfb=$!  
   
-chromium --no-sandbox --disable-gpu --headless $@ &  
+chromium- --no-sandbox --disable-gpu --headless $@ &  
 chromium=$!  
   
 wait $chromium  
