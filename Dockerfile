@@ -13,6 +13,7 @@ ENV TZ ${TZ}
 
 # https://pkgs.alpinelinux.org/package/edge/community/x86_64/chromium
 RUN apk update && apk add --no-cache bash \
+    dhclient \
     alsa-lib \
     at-spi2-atk \
     atk \
