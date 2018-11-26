@@ -61,6 +61,8 @@ ENTRYPOINT [ "chromium-browser", \
   "--remote-debugging-port=9222", \
   "--disable-dev-shm-usage", \
   "--window-size=1920,1080", \
+  "--proxy-server='direct://'", \
+  "--proxy-bypass-list=*", \
   # Disable various background network services, including extension updating,
   #   safe browsing service, upgrade detector, translate, UMA
   "--disable-background-networking", \
