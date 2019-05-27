@@ -1,14 +1,12 @@
 FROM python:3-alpine3.9
 LABEL maintainer="lyndon <snakeliwei@gmail.com>"
 
+ARG TZ="Asia/Shanghai"
+
 # update apk repo
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.9/main" >> /etc/apk/repositories && \
     echo "http://dl-4.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories && \
-
-    
-ARG TZ="Asia/Shanghai"
-
-RUN apk update && \
+    apk update && \
     apk add --no-cache bash \
             dhclient \
             xvfb \  
